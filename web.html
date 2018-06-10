@@ -1,0 +1,79 @@
+<!--
+# Copyright 2018 IBM
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
+
+<html>
+
+<head>
+  <title>Speech to Text - Assistant - Text to Speech</title>
+</head>
+
+<body>
+  <div id="no-script">
+    This application needs JavaScript enabled in your browser!
+  </div>
+   <div id="id_contextdump"></div>
+
+  <h1>My BOT</h1>
+  <div id=id_botchathistory>
+</div>
+
+<div>
+    <form>
+        <label for="id_chattext">Your Input: </label>
+        <input type="text" name="chattext" id="id_chattext">
+        <br/><br/>
+    </form>
+    <button onclick="javascript:onChatClick()" id="id_enter">Send</button>
+</div>
+</div>
+
+    <div>
+      <button type="button" id="id_recordButton">
+	         Record
+		    </button>
+      <button type="button" id="id_stopButton">
+           Stop
+		    </button>
+      <div id="id_datastore"></div>
+    </div>
+
+ <div id="status-microphone">
+  </div>
+  <div id="status-socket">
+  </div>
+  <div id='audio-supported'>
+    <div>Click Record to start streaming audio, and Stop to stop.</div>
+
+  </div>
+  <div id='audio-notsuppported'>
+    <div>Not able to capture audio in this browser.</div>
+  </div>
+  <div id='transcription'>
+  </div>
+
+  <!-- If you want to see the audio control on the page change to -->
+  <!-- <audio controls autoplay id='audiotag'> -->
+  <audio autoplay id='audiotag'>
+   <source id='audiosource' type="audio/mpeg"/>
+  </audio>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <script>
+    {{{payload.javascript}}}
+  </script>
+</body>
+<html>
